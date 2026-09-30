@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ink: #203344; --muted: #718397; --line: #d8e6ef; --paper: #f3f8fc; --sky: #b9e2f4; --blue: #4e8db5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Space Grotesk', sans-serif; }
+button, input, select { font: inherit; }
+.mono { font-family: 'DM Mono', monospace; }
+.grain { background-image: radial-gradient(#b9d5e5 0.6px, transparent 0.6px); background-size: 8px 8px; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.rise { animation: rise .45s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .rise { animation: none; } }
+
+/* Keep legacy utility classes visually consistent with the pastel blue system. */
+[class*="bg-[#183a32]"], [class*="bg-[#15271f]"] { background-color: #3f7696 !important; }
+[class*="bg-[#183a32]"] { color: #ffffff; }
+[class*="bg-[#edf2eb]"], [class*="bg-[#e7eee3]"], [class*="bg-[#f8faf6]"], [class*="bg-[#f6f8f3]"] { background-color: #f3f8fc !important; }
+[class*="bg-[#dcebcf]"], [class*="bg-[#e3ebe0]"], [class*="bg-[#e2edd6]"], [class*="bg-[#e5f3d8]"], [class*="bg-[#e7f3dc]"] { background-color: #dff1fa !important; }
+[class*="bg-[#e4edf5]"] { background-color: #dbeefa !important; }
+[class*="bg-[#ffe2d8]"], [class*="bg-[#fff0e9]"], [class*="bg-[#fff0eb]"] { background-color: #fff0f0 !important; }
+[class*="bg-[#fff0c7]"] { background-color: #fff7dc !important; }
+[class*="border-[#dfe6df]"], [class*="border-[#e7ece7]"], [class*="border-[#edf1ed]"], [class*="border-[#d7e1d7]"], [class*="border-[#e2e8e1]"] { border-color: #d8e6ef !important; }
+[class*="text-[#183a32]"], [class*="text-[#225d48]"], [class*="text-[#4d7258]"], [class*="text-[#35631e]"], [class*="text-[#315f7e]"], [class*="text-[#416751]"] { color: #3f7696 !important; }
+[class*="text-[#c9f45d]"] { color: #d8f2ff !important; }
+[class*="bg-[#c9f45d]"] { background-color: #a8d9ef !important; }
